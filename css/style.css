@@ -1,0 +1,455 @@
+/* Style.css */
+
+
+/*
+
+TABLE OF CONTENTS
+------------------------
+
+-Fonts
+-General
+-Header
+-Hero
+-Projects
+-About Section
+-Contact Section
+-Footer
+-Slider
+-Media-queries
+
+-------------------------
+THEME COLORS
+-------------------------
+
+white: #c8f2ff;
+dark: #001418;
+blue: #005264;
+
+*/
+
+
+/*=================================
+
+FONTS
+
+=======================================*/
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+/*=================================
+
+GENERAL
+
+=======================================*/
+
+html {
+    font-family: Ubuntu, sans-serif;
+}
+
+p {
+    color: #c8f2ff;
+}
+
+a {
+    color: #c8f2ff;
+}
+
+a:hover {
+    color: #c8f2ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Montserrat, Arial;
+    color: #c8f2ff;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 80px;
+}
+
+.section-title {
+    color: #c8f2ff;
+    background: #001418;
+    border: 3px solid #c8f2ff;
+    border-radius: 51px;
+    padding: 20px;
+}
+
+
+/* Social Icons */
+
+.social-list li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.social-list li i {
+    font-size: 1.5rem;
+}
+
+.social-list {
+    margin: 0px;
+    width: 100%;
+}
+
+
+/*=================================
+
+HEADER
+
+=======================================*/
+.top-bar{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0, 160, 195, 0.8);
+    box-shadow: 0 0 20px 0px #c8f2ff;
+}
+
+.top-bar ul {
+    background: transparent;
+}
+
+.top-bar-left {
+    width: 30%!important;
+}
+
+.logo {
+    max-width: 80px;
+}
+
+.menu{
+    margin-top: 12px;
+}
+
+.menu li{
+    text-transform: uppercase;
+    font-family: Montserrat, arial;
+}
+
+.menu li a{
+    color: #001418;
+    font-weight: bold;
+    font-size: 1.4em;
+    height: 60px;
+}
+
+.menu li a:hover{
+    animation-name: highLight;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes highLight{
+    0%{
+        animation: scale(1);
+        text-shadow: 0px 0px 0px white;
+    }
+    100%{
+        font-size: 1.5em;
+        text-shadow: 0px 0px 10px white;
+    }
+}
+.top-bar-left:after{
+    content: '';
+    position: absolute;
+    top: -30px;
+    bottom: -10px;
+    width: 30%;
+    left: -45px;
+    background-color: #005264;
+    -webkit-transform: skewX(-33deg);
+    -khtml-transform: skewX(-33deg);
+    -moz-transform: skewX(-33deg);
+    -ms-transform: skewX(-33deg);
+    transform: skewX(-33deg);
+    z-index: -1;    
+    box-shadow: 2px 2px 40px -10px black;
+}
+
+
+/*=================================
+
+HERO
+
+=======================================*/
+
+
+/* Canvas + Shader site background */
+
+.background-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+noindex:-o-prefocus,
+.background-container {
+    display: none;
+}
+
+#hero {
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-logo {
+    display: block;
+    max-width: 100px;
+    position: absolute;
+    top: -55px;
+    left: 42%;
+    border: 3px solid #c8f2ff;
+    background: #003f4c;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.hero-info {
+    text-align: center;
+    display: block;
+    max-width: 630px;
+    padding: 40px 20px 80px 20px;
+    border: 1px solid #c8f2ff;
+    position: relative;
+    border-radius: 20px;
+    background: rgba(0, 13, 16, 0.28);
+    box-shadow: 0px 0px 64px 0px #0099ba;
+}
+
+#social-info {
+    background: #001418;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top: 1px solid #c8f2ff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+
+/*=================================
+
+PROJECTS
+
+=======================================*/
+
+#project-section {
+    background: #005264;
+    position: relative;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+#project-section .section-title {
+    position: absolute;
+    top: -51px;
+}
+
+#projects h2 {
+    color: #c8f2ff;
+    text-align: center;
+}
+
+.project-item-title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.project-item-description {
+    text-align: center;
+}
+
+.project-item-btn {
+    text-align: center;
+    font-size: 23px;
+    color: #FFF;
+    background: #00262e;
+    border-radius: 30px;
+    border: 1px solid #c8f2ff;
+    display: block;
+    max-width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+.project-desc {
+    display: block;
+    background-color: #000e11;
+    padding: 10px;
+}
+
+.project-item-btn:hover {
+    background: #011215;
+}
+
+
+/*=================================
+
+ABOUT SECTION
+
+=======================================*/
+
+#about-section {
+    position: relative;
+    margin: 80px 0;
+}
+
+#about-img {
+    background: url(../img/About-Section.png);
+    background-size: cover;
+    background-position: top;
+    height: 600px;
+}
+
+#about-section .row {
+    border: 4px solid #c8f2ff;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+
+#about-section h3,
+#about-section p {
+    font-weight: bold;
+    color: #011215;
+}
+
+#about-section .section-title {
+    position: absolute;
+    top: 36px;
+}
+
+
+
+/*=================================
+
+CONTACT SECTION
+
+=======================================*/
+
+#contact-section {
+    position: relative;
+    background: #005264;
+    padding: 80px;
+    border-top: 3px solid #c8f2ff;
+    border-bottom: 3px solid #c8f2ff;
+}
+
+#contact-section .section-title {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    position: absolute;
+    top: -50px;
+}
+
+.contact-btn {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.orb-icon {
+    border-radius: 50%;
+    background: #001418;
+    border: 4px solid #c8f2ff;
+}
+
+.orb-icon:hover {
+    animation-name: glowGrow;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes glowGrow {
+    0% {
+        box-shadow: 0px 0px 10px 0px black;
+        transform: scale(1);
+    }
+    100% {
+        box-shadow: 0px 0px 20px 0px black;
+        transform: scale(1.1);
+    }
+}
+
+#location-row,
+#email-row,
+#call-row {
+    text-align: center;
+    padding: 40px;
+}
+
+
+/*=================================
+
+FOOTER
+
+=======================================*/
+
+footer {
+    margin: 40px 0;
+    text-align: center;
+}
+
+
+/*=================================
+
+SLIDER
+
+=======================================*/
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding: 40px 0;
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 20px;
+}
+
+.swiper-pagination {
+    bottom: 0!important;
+}
+
+/*=================================
+
+MEDIA QUERIES
+
+=======================================*/
+
+@media only screen and (max-width: 600px) {
+    section{
+        padding: 0;
+    }
+}
